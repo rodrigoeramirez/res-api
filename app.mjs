@@ -6,7 +6,7 @@
 // Primero debo inicializar el proyecto: Me pocisiono en clase3 y escribo npm init -y para inicializar el proyecto y crear el package.json
 
 import express from "express"; //  Mediante ESM importo el modulo de "express", que habia instalado con NPM.
-import movies from "./movies.json" assert { type: "json" }; // Importo el archivo movies.json y pongo asser porque en ESM todavia no estpa desarrollado del todo json.
+import movies from "./movies.json" with { type: "json" }; // Importo el archivo movies.json y pongo asser porque en ESM todavia no estpa desarrollado del todo json.
 import { validateMovie, validateMoviePartial } from "./validate.mjs";
 const app = express(); // Aqui estaria creando el servidor.
 app.disable("x-powered-by"); // Deshabilito el powered-by del header por seguridad.
