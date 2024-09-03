@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 
 // "/movies" es un end point que recupera todas las peliculas.
 app.get("/movies", async (req, res) => {
-  res.header("Access-Control-Allow-Origin", "http://localhost:8080"); // Con * le doy permiso a todas las paginas web.
+  res.header("Access-Control-Allow-Origin", "*"); // Con * le doy permiso a todas las paginas web.
   const { genre } = req.query; // Con la query puedo obtener el valor de todo por ejemplo "/movies?genre=terror&id=dcdd0fad-a94c-4810" -> {genre, id}
   if (genre) {
     const movie = movies.filter((movie) => movie.genre.includes(genre)); // Uso include porque en el json el genero es un array de strings
