@@ -18,7 +18,7 @@
       </style>
       
       <script type="module"> //  type="module" en la etiqueta <script> se utiliza para indicar que el script es un módulo de JavaScript. 
-        fetch('https://res-api-ord7.onrender.com/movies') // Realiza una solicitud HTTP GET a la URL especificada.
+        fetch('https://res-api-ord7.onrender.com/movies?genre=Action') // Realiza una solicitud HTTP GET a la URL especificada.
         // Error CORS es cunado una pagina quiere acceder a mi API y no tiene permisos. Por eso se queda en blanco.
         // Para solucionarlo tengo que declarar en cada metodo o endpoint de mi API el acceso de cada peticion de esta url index.html.
           .then(res => res.json()) // Una vez que se recibe la respuesta, si es exitosa, se convierte la respuesta en JSON
